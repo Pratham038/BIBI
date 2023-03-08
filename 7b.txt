@@ -1,0 +1,5 @@
+library(party)
+print(head(readingSkills))
+dat <- readingSkills[c(1:105),]
+out <- ctree(nativeSpeaker ~ age + shoeSize + score , data=dat )
+plot(out)
